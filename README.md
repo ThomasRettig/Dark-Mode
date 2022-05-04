@@ -1,11 +1,14 @@
+**Original link**: https://ar.al/2021/08/24/implementing-dark-mode-in-a-handful-of-lines-of-css-with-css-filters/
+
+---
+
 # Dark mode (Pure CSS)
-Exact source code taken from Aral Balkan's excellent guide on how to implement dark mode via CSS.
+What you see here is the source code taken directly from Aral Balkan’s excellent just-add-water dark mode CSS solution.
 
-Although this might be an efficient solution for large websites, there are greater nuances in crafting a visually realistic dark mode appearance, such as depth and contrast. In addition, dark mode is activated only when ```@media (prefers-color-scheme: dark)``` is on. In other words, it’s system-level, so folks can't toggle between dark mode and light mode.
+## Design considerations
+Although this might be an efficient solution for large websites, it’s a bit hacky in my opinion, because the `filter` property can lead to some visual artefacts caused by the browser rendering engine. Additionally, there are greater nuances in crafting a visually realistic dark mode appearance, such as depth and contrast. In addition, dark mode is activated only when ```@media (prefers-color-scheme: dark)``` is on. In other words, it’s system-level, so folks can't toggle between dark mode and light mode.
 
-That said, I love how Aral uses the ```filter:invert;``` CSS property to swap around the colours. Worth noting that chrome://dino also uses this same technique!
-
-Here’s the code:
+## Source code
 ```css
 /*
 Source code by Aral Balkan -> https://ar.al/2021/08/24/implementing-dark-mode-in-a-handful-of-lines-of-css-with-css-filters/
@@ -46,7 +49,4 @@ Source code by Aral Balkan -> https://ar.al/2021/08/24/implementing-dark-mode-in
     color: #666;
   }
 }
-
 ```
-
-And the link: https://ar.al/2021/08/24/implementing-dark-mode-in-a-handful-of-lines-of-css-with-css-filters/
